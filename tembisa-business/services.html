@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Thato's Reliable Services</title>
+    <title>Our Services | Thato's Reliable Services, Tembisa</title>
+    <meta name="description" content="Compare plumbing, electrical, digital support and property care services for homes and small businesses in Tembisa. See what suits you, then request a quote.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body class="services-page">
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
@@ -22,7 +24,7 @@
     <header>
         <div class="container nav-container">
             <h1 class="logo">Thato's <span>Services</span></h1>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
@@ -34,94 +36,202 @@
 
     <main class="container">
         <section class="page-header">
-            <h2>Professional Services Tailored for You</h2>
-            <p>Explore our wide range of expert solutions designed for homes and small businesses in Tembisa.</p>
+            <span class="eyebrow center">Our services</span>
+            <h2>Find the service that fits your day</h2>
+            <p>Browse real photos, clear descriptions and plain-language guidance for homes and small businesses in Tembisa.</p>
+        </section>
+
+        <!-- Quick service finder -->
+        <section class="quick-finder" id="find-my-service" aria-label="Quick service finder">
+            <div class="finder-copy">
+                <span class="eyebrow">Start here</span>
+                <h2>What's the problem today?</h2>
+                <p>Choose the closest match and we'll jump to the right service below.</p>
+            </div>
+            <div class="finder-options">
+                <button type="button" class="finder-option" data-scroll-target="service-plumbing">
+                    <span class="finder-icon" aria-hidden="true">💧</span>
+                    <strong>Leak, tap or drain</strong>
+                    <small>Plumbing & home repairs</small>
+                </button>
+                <button type="button" class="finder-option" data-scroll-target="service-electrical">
+                    <span class="finder-icon" aria-hidden="true">⚡</span>
+                    <strong>Lights, sockets or tripping</strong>
+                    <small>Electrical maintenance</small>
+                </button>
+                <button type="button" class="finder-option" data-scroll-target="service-digital">
+                    <span class="finder-icon" aria-hidden="true">💻</span>
+                    <strong>Wi-Fi, laptop or going online</strong>
+                    <small>Digital & tech support</small>
+                </button>
+                <button type="button" class="finder-option" data-scroll-target="service-gardening">
+                    <span class="finder-icon" aria-hidden="true">🌿</span>
+                    <strong>Lawn, weeds or untidy yard</strong>
+                    <small>Gardening & property care</small>
+                </button>
+            </div>
+        </section>
+
+        <!-- Compare table -->
+        <section class="compare-wrap" id="compare">
+            <div class="compare-heading">
+                <span class="eyebrow">At a glance</span>
+                <h2>Which service suits you?</h2>
+                <p>A quick comparison before you dive into the details.</p>
+            </div>
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Service</th>
+                        <th scope="col">Best for</th>
+                        <th scope="col">Most common request</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Service">Plumbing & Home Repairs</td>
+                        <td data-label="Best for">Homeowners, landlords, small businesses</td>
+                        <td data-label="Most common request">A leak, blocked drain or fixture that needs fixing</td>
+                        <td data-label="Action"><a href="#service-plumbing">View details &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service">Electrical Maintenance</td>
+                        <td data-label="Best for">Homes, shops and offices</td>
+                        <td data-label="Most common request">Lights, sockets, switches or a tripping circuit</td>
+                        <td data-label="Action"><a href="#service-electrical">View details &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service">Digital Support & Setup</td>
+                        <td data-label="Best for">Spaza shops, salons, home offices</td>
+                        <td data-label="Most common request">Wi-Fi setup, device troubleshooting, getting online</td>
+                        <td data-label="Action"><a href="#service-digital">View details &rarr;</a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service">Gardening & Property Care</td>
+                        <td data-label="Best for">Homes, guesthouses, business fronts</td>
+                        <td data-label="Most common request">Lawn mowing, weeding and a tidy yard</td>
+                        <td data-label="Action"><a href="#service-gardening">View details &rarr;</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <div class="services-list-container">
             <!-- Service 1 -->
-            <div class="service-row">
+            <article class="service-row" id="service-plumbing">
                 <div class="service-img">
                     <div class="img-frame">
-                        <span class="fallback-icon">🚰</span>
-                        <img src="https://picsum.photos/seed/plumbing/800/600" alt="Plumbing and Home Repairs" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">🚰</span>
+                        <img src="assets/service-plumbing.jpg" alt="Plumber repairing a kitchen sink pipe in a Tembisa home" loading="lazy">
                     </div>
                 </div>
                 <div class="service-desc">
                     <span class="service-tag">Popular</span>
                     <h3>Home Repairs & Plumbing</h3>
-                    <p>From leaky pipes and blocked drains to full fixture installations and general household restoration, our expert team delivers durable, clean workmanship.</p>
-                    <ul>
-                        <li>✔ Leak detection & pipe fixing</li>
-                        <li>✔ Toilet & sink installations</li>
-                        <li>✔ General property maintenance</li>
+                    <p class="service-lead">From leaky pipes and blocked drains to full fixture installations and general household restoration, our expert team delivers durable, clean workmanship.</p>
+                    <div class="fit-row">
+                        <span class="fit-label">Best for</span>
+                        <span class="pill">Homeowners</span>
+                        <span class="pill">Landlords</span>
+                        <span class="pill amber">Small businesses</span>
+                    </div>
+                    <h4>Choose this when…</h4>
+                    <ul class="check-list">
+                        <li>Water is dripping under a sink or at a pipe joint</li>
+                        <li>A drain is blocked, or a toilet and basin aren't working right</li>
+                        <li>You need a fixture installed or general property maintenance</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Book This Service</a>
+                    <div class="service-note"><strong>Good to know:</strong> A quick photo of the problem with your request helps us arrive better prepared.</div>
+                    <a href="contact.html?service=plumbing" class="btn btn-primary">Request This Service</a>
                 </div>
-            </div>
+            </article>
 
             <!-- Service 2 -->
-            <div class="service-row reverse">
+            <article class="service-row reverse" id="service-electrical">
                 <div class="service-img">
                     <div class="img-frame">
-                        <span class="fallback-icon">⚡</span>
-                        <img src="https://picsum.photos/seed/electrical/800/600" alt="Electrical Maintenance" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">⚡</span>
+                        <img src="assets/service-electrical.jpg" alt="Electrician safely testing a home distribution board" loading="lazy">
                     </div>
                 </div>
                 <div class="service-desc">
-                    <span class="service-tag">Certified</span>
+                    <span class="service-tag">Safe & compliant</span>
                     <h3>Electrical Maintenance & Wiring</h3>
-                    <p>Safety comes first. We handle all minor and major domestic electrical needs, ensuring your home or business is safe, compliant, and brightly lit.</p>
-                    <ul>
-                        <li>✔ Light fixture & ceiling fan setup</li>
-                        <li>✔ Plug socket & switch repairs</li>
-                        <li>✔ DB board checks & fault finding</li>
+                    <p class="service-lead">Safety comes first. We handle minor and major domestic electrical needs, helping keep your home or business safe, compliant and brightly lit.</p>
+                    <div class="fit-row">
+                        <span class="fit-label">Best for</span>
+                        <span class="pill">Homeowners</span>
+                        <span class="pill amber">Shops & offices</span>
+                    </div>
+                    <h4>Choose this when…</h4>
+                    <ul class="check-list">
+                        <li>Lights flicker, fail to come on, or a circuit keeps tripping</li>
+                        <li>A plug socket or switch is loose, damaged or sparks</li>
+                        <li>You need light fixtures, fans installed, or a DB board checked</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Book This Service</a>
+                    <div class="service-note"><strong>Good to know:</strong> For an electrical fault, switch off the affected circuit and tell us what happened when you book.</div>
+                    <a href="contact.html?service=electrical" class="btn btn-primary">Request This Service</a>
                 </div>
-            </div>
+            </article>
 
             <!-- Service 3 -->
-            <div class="service-row">
+            <article class="service-row" id="service-digital">
                 <div class="service-img">
                     <div class="img-frame">
-                        <span class="fallback-icon">💻</span>
-                        <img src="https://picsum.photos/seed/digital/800/600" alt="Digital Solutions" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">💻</span>
+                        <img src="assets/service-digital.jpg" alt="Technician helping a local business owner set up a laptop and Wi-Fi router" loading="lazy">
                     </div>
                 </div>
                 <div class="service-desc">
-                    <span class="service-tag">Modern Tech</span>
+                    <span class="service-tag">For local business</span>
                     <h3>Digital Support & Setup</h3>
-                    <p>Helping local small businesses and entrepreneurs get online, set up stable workspace Wi-Fi, and troubleshoot tech hurdles with ease.</p>
-                    <ul>
-                        <li>✔ Small business Wi-Fi setup</li>
-                        <li>✔ Computer & printer troubleshooting</li>
-                        <li>✔ Basic website & social setup guidance</li>
+                    <p class="service-lead">Helping local small businesses and entrepreneurs get online, set up stable workspace Wi-Fi, and troubleshoot tech hurdles with ease.</p>
+                    <div class="fit-row">
+                        <span class="fit-label">Best for</span>
+                        <span class="pill amber">Spaza shops</span>
+                        <span class="pill amber">Salons & studios</span>
+                        <span class="pill">Home offices</span>
+                    </div>
+                    <h4>Choose this when…</h4>
+                    <ul class="check-list">
+                        <li>Your Wi-Fi is weak, slow or drops out during business hours</li>
+                        <li>A laptop, phone or printer needs troubleshooting</li>
+                        <li>You want guidance on a basic website or social pages</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Book This Service</a>
+                    <div class="service-note"><strong>Good to know:</strong> Tell us how you use the internet so we can suggest a setup that suits the way you work.</div>
+                    <a href="contact.html?service=digital" class="btn btn-primary">Request This Service</a>
                 </div>
-            </div>
+            </article>
 
             <!-- Service 4 -->
-            <div class="service-row reverse">
+            <article class="service-row reverse" id="service-gardening">
                 <div class="service-img">
                     <div class="img-frame">
-                        <span class="fallback-icon">🌿</span>
-                        <img src="https://picsum.photos/seed/gardening/800/600" alt="Cleaning and Property Care" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">🌿</span>
+                        <img src="assets/service-gardening.jpg" alt="Gardener mowing a neat front lawn at a Tembisa home" loading="lazy">
                     </div>
                 </div>
                 <div class="service-desc">
-                    <span class="service-tag">Reliable Care</span>
+                    <span class="service-tag">Reliable care</span>
                     <h3>Gardening & Property Care</h3>
-                    <p>Keep your premises looking pristine. We provide dependable garden upkeep, debris clearing, and compound cleaning services.</p>
-                    <ul>
-                        <li>✔ Lawn mowing & weeding</li>
-                        <li>✔ Yard cleanups & waste clearing</li>
-                        <li>✔ Routine property maintenance</li>
+                    <p class="service-lead">Keep your premises looking pristine. We provide dependable garden upkeep, debris clearing and compound cleaning services.</p>
+                    <div class="fit-row">
+                        <span class="fit-label">Best for</span>
+                        <span class="pill">Homeowners</span>
+                        <span class="pill">Guesthouses</span>
+                        <span class="pill amber">Business fronts</span>
+                    </div>
+                    <h4>Choose this when…</h4>
+                    <ul class="check-list">
+                        <li>The lawn needs mowing, edges need trimming, or weeds are taking over</li>
+                        <li>Garden waste is piling up after a project or clean-out</li>
+                        <li>You want routine care to keep your premises welcoming</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Book This Service</a>
+                    <div class="service-note"><strong>Good to know:</strong> Share the size of the area and access details so we can plan the visit properly.</div>
+                    <a href="contact.html?service=gardening" class="btn btn-primary">Request This Service</a>
                 </div>
-            </div>
+            </article>
         </div>
     </main>
 
@@ -143,7 +253,7 @@
             <div>
                 <h4>Contact Info</h4>
                 <p>Tembisa, Gauteng, South Africa</p>
-                <p>Phone: +27 (0)71 234 5678</p>
+                <p>Phone: <a href="tel:+27712345678">+27 (0)71 234 5678</a></p>
             </div>
         </div>
         <div class="sub-footer">
