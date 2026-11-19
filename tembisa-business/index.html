@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thato's Reliable Services | Tembisa</title>
+    <title>Thato's Reliable Services | Tembisa Home & Business Services</title>
+    <meta name="description" content="Local plumbing, electrical, digital support and property care for homes and small businesses in Tembisa, Johannesburg. Find the right service in seconds.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Top Bar -->
@@ -22,7 +24,7 @@
     <header>
         <div class="container nav-container">
             <h1 class="logo">Thato's <span>Services</span></h1>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -33,29 +35,35 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
                     <span class="badge">Trusted Tembisa Professionals</span>
                     <h2>Expert Home & Business Services at Your Doorstep</h2>
-                    <p>Professional plumbing, electrical repairs, digital setup, and property maintenance designed for local households and growing small businesses in Tembisa.</p>
+                    <p>From a leaking tap to your shop's Wi-Fi, we help local households and small businesses in Tembisa find the right fix — quickly and without the guesswork.</p>
                     <div class="hero-buttons">
-                        <a href="services.html" class="btn btn-primary">Explore Services</a>
-                        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                        <a href="#find-my-service" class="btn btn-primary">Find My Service</a>
+                        <a href="contact.html" class="btn btn-secondary">Request a Quote</a>
+                    </div>
+                    <div class="hero-proof">
+                        <span>Local to Tembisa</span>
+                        <span>Clear, honest quotes</span>
+                        <span>Homes & small businesses</span>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="img-frame">
-                        <span class="fallback-icon">🔧</span>
-                        <img src="https://picsum.photos/seed/technician/800/600" alt="Professional technician at work" onerror="this.style.display='none';this.parentElement.querySelector('.fallback-icon').style.display='flex';" />
+                        <span class="fallback-icon" aria-hidden="true">🔧</span>
+                        <img src="assets/hero-local-services.jpg" alt="A friendly local technician with a toolbox outside a home in Tembisa" fetchpriority="high">
+                        <div class="photo-caption"><span aria-hidden="true"></span> Right here in the community</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features / Trust Section -->
-        <section class="features container">
+        <!-- Trust features -->
+        <section class="features container" aria-label="Why choose us">
             <div class="card">
                 <div class="card-icon">⚡</div>
                 <h3>Fast & Local</h3>
@@ -73,47 +81,182 @@
             </div>
         </section>
 
-        <!-- Featured Services Preview -->
+        <!-- Quick service finder -->
+        <section class="quick-finder container" id="find-my-service">
+            <div class="finder-copy">
+                <span class="eyebrow">Quick service finder</span>
+                <h2>Not sure which service you need?</h2>
+                <p>Tap the problem that sounds most like yours. We'll take you straight to the right service and show you what's included.</p>
+            </div>
+            <div class="finder-options">
+                <button type="button" class="finder-option" data-scroll-target="service-plumbing">
+                    <span class="finder-icon" aria-hidden="true">💧</span>
+                    <strong>Leak, tap or drain</strong>
+                    <small>Plumbing & home repairs</small>
+                </button>
+                <button type="button" class="finder-option" data-scroll-target="service-electrical">
+                    <span class="finder-icon" aria-hidden="true">⚡</span>
+                    <strong>Lights, sockets or tripping</strong>
+                    <small>Electrical maintenance</small>
+                </button>
+                <button type="button" class="finder-option" data-scroll-target="service-digital">
+                    <span class="finder-icon" aria-hidden="true">💻</span>
+                    <strong>Wi-Fi, laptop or going online</strong>
+                    <small>Digital & tech support</small>
+                </button>
+                <button type="button" class="finder-option" data-scroll-target="service-gardening">
+                    <span class="finder-icon" aria-hidden="true">🌿</span>
+                    <strong>Lawn, weeds or untidy yard</strong>
+                    <small>Gardening & property care</small>
+                </button>
+            </div>
+        </section>
+
+        <!-- Who we help -->
+        <section class="audience-section container">
+            <div class="section-title">
+                <span class="eyebrow center">Built for our community</span>
+                <h2>Clear choices for homes and businesses</h2>
+                <p>Every job is different. These guides help both homeowners and local business owners pick the service that fits.</p>
+            </div>
+            <div class="audience-grid">
+                <article class="audience-card home">
+                    <span class="audience-icon" aria-hidden="true">🏠</span>
+                    <h3>For your home</h3>
+                    <p>Keep the family home safe, comfortable and looking its best with practical, no-nonsense help.</p>
+                    <ul class="audience-list">
+                        <li>Leaks, blocked drains and broken fixtures</li>
+                        <li>Lights, plugs and electrical fault finding</li>
+                        <li>Garden upkeep and general property care</li>
+                    </ul>
+                    <div class="audience-links">
+                        <a href="services.html#service-plumbing">Plumbing</a>
+                        <a href="services.html#service-electrical">Electrical</a>
+                        <a href="services.html#service-gardening">Gardening</a>
+                    </div>
+                </article>
+                <article class="audience-card business">
+                    <span class="audience-icon" aria-hidden="true">🏪</span>
+                    <h3>For your small business</h3>
+                    <p>From the shop floor to the front desk, get practical support that keeps your business moving.</p>
+                    <ul class="audience-list">
+                        <li>Reliable Wi-Fi and device troubleshooting</li>
+                        <li>Safe lighting and socket repairs</li>
+                        <li>Neat, welcoming premises for customers</li>
+                    </ul>
+                    <div class="audience-links">
+                        <a href="services.html#service-digital">Digital support</a>
+                        <a href="services.html#service-electrical">Electrical</a>
+                        <a href="services.html#service-gardening">Property care</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured services -->
         <section class="preview-section container">
             <div class="section-title">
-                <h2>Our Core Services</h2>
-                <p>Everything you need to keep your home and business running smoothly.</p>
+                <span class="eyebrow center">Our core services</span>
+                <h2>See what each service is for</h2>
+                <p>Real photos, plain-language descriptions and the signs that tell you it's time to book.</p>
             </div>
             <div class="service-grid">
-                                <div class="service-preview-card">
+                <article class="service-preview-card" id="service-plumbing">
                     <div class="img-frame">
-                        <span class="fallback-icon">🚰</span>
-                        <img src="https://picsum.photos/seed/plumbing/600/400" alt="Plumbing Repairs" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">🚰</span>
+                        <img src="assets/service-plumbing.jpg" alt="Plumber repairing a kitchen sink pipe in a Tembisa home" loading="lazy">
+                        <span class="card-number">01</span>
+                        <span class="card-tag">POPULAR</span>
                     </div>
                     <div class="service-preview-body">
                         <h3>Plumbing & Home Repairs</h3>
-                        <p>Leak detection, pipe repairs, and general household maintenance done right the first time.</p>
-                        <a href="services.html" class="link-arrow">Learn more &rarr;</a>
+                        <div class="best-for"><span aria-hidden="true">🎯</span><div><strong>Best for:</strong> drips, leaks, sinks, toilets and everyday fixes.</div></div>
+                        <ul class="signs-list">
+                            <li>Water dripping under a sink or at a pipe joint</li>
+                            <li>A tap, toilet or basin that isn't working properly</li>
+                            <li>General maintenance you want done neatly</li>
+                        </ul>
+                        <div class="card-bottom">
+                            <div class="pills"><span class="pill">Homes</span><span class="pill amber">Businesses</span></div>
+                            <a href="services.html#service-plumbing" class="link-arrow">See details <span aria-hidden="true">&rarr;</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="service-preview-card">
+                </article>
+
+                <article class="service-preview-card" id="service-electrical">
                     <div class="img-frame">
-                        <span class="fallback-icon">⚡</span>
-                        <img src="https://picsum.photos/seed/electrical/600/400" alt="Electrical Work" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">⚡</span>
+                        <img src="assets/service-electrical.jpg" alt="Electrician safely testing a home distribution board" loading="lazy">
+                        <span class="card-number">02</span>
+                        <span class="card-tag">SAFE WORK</span>
                     </div>
                     <div class="service-preview-body">
                         <h3>Electrical Maintenance</h3>
-                        <p>Safe wiring checks, light fixture installations, and socket repairs by qualified technicians.</p>
-                        <a href="services.html" class="link-arrow">Learn more &rarr;</a>
+                        <div class="best-for"><span aria-hidden="true">🎯</span><div><strong>Best for:</strong> lights, sockets, switches and DB board checks.</div></div>
+                        <ul class="signs-list">
+                            <li>Lights flickering or a light that won't come on</li>
+                            <li>Plugs or switches that are loose or damaged</li>
+                            <li>You need a fixture installed or a fault traced</li>
+                        </ul>
+                        <div class="card-bottom">
+                            <div class="pills"><span class="pill">Homes</span><span class="pill amber">Businesses</span></div>
+                            <a href="services.html#service-electrical" class="link-arrow">See details <span aria-hidden="true">&rarr;</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="service-preview-card">
+                </article>
+
+                <article class="service-preview-card" id="service-digital">
                     <div class="img-frame">
-                        <span class="fallback-icon">💻</span>
-                        <img src="https://picsum.photos/seed/digital/600/400" alt="Digital Solutions" onerror="this.style.display='none';">
+                        <span class="fallback-icon" aria-hidden="true">💻</span>
+                        <img src="assets/service-digital.jpg" alt="Technician helping a local business owner set up a laptop and Wi-Fi router" loading="lazy">
+                        <span class="card-number">03</span>
+                        <span class="card-tag">FOR ENTREPRENEURS</span>
                     </div>
                     <div class="service-preview-body">
                         <h3>Digital & Tech Support</h3>
-                        <p>Small business Wi-Fi setup, computer troubleshooting, and digital presence setup.</p>
-                        <a href="services.html" class="link-arrow">Learn more &rarr;</a>
+                        <div class="best-for"><span aria-hidden="true">🎯</span><div><strong>Best for:</strong> Wi-Fi, devices and getting your business online.</div></div>
+                        <ul class="signs-list">
+                            <li>Slow or unreliable internet at your workspace</li>
+                            <li>A laptop or printer that needs troubleshooting</li>
+                            <li>You want help with a website or social pages</li>
+                        </ul>
+                        <div class="card-bottom">
+                            <div class="pills"><span class="pill amber">Small businesses</span><span class="pill">Home offices</span></div>
+                            <a href="services.html#service-digital" class="link-arrow">See details <span aria-hidden="true">&rarr;</span></a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="service-preview-card" id="service-gardening">
+                    <div class="img-frame">
+                        <span class="fallback-icon" aria-hidden="true">🌿</span>
+                        <img src="assets/service-gardening.jpg" alt="Gardener mowing a neat front lawn at a Tembisa home" loading="lazy">
+                        <span class="card-number">04</span>
+                        <span class="card-tag">CURB APPEAL</span>
+                    </div>
+                    <div class="service-preview-body">
+                        <h3>Gardening & Property Care</h3>
+                        <div class="best-for"><span aria-hidden="true">🎯</span><div><strong>Best for:</strong> lawns, weeds, yard clean-ups and tidiness.</div></div>
+                        <ul class="signs-list">
+                            <li>The lawn is overgrown or the edges look untidy</li>
+                            <li>Garden waste is piling up after a project</li>
+                            <li>Your premises need to look welcoming</li>
+                        </ul>
+                        <div class="card-bottom">
+                            <div class="pills"><span class="pill">Homes</span><span class="pill amber">Business fronts</span></div>
+                            <a href="services.html#service-gardening" class="link-arrow">See details <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
             </div>
+        </section>
+
+        <section class="cta-band container">
+            <div>
+                <h2>Know what you need? Let's get it booked.</h2>
+                <p>Tell us which service fits and what's happening — we'll take it from there.</p>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Request a Quote</a>
         </section>
     </main>
 
@@ -135,7 +278,7 @@
             <div>
                 <h4>Contact Info</h4>
                 <p>Tembisa, Gauteng, South Africa</p>
-                <p>Phone: +27 (0)71 234 5678</p>
+                <p>Phone: <a href="tel:+27712345678">+27 (0)71 234 5678</a></p>
             </div>
         </div>
         <div class="sub-footer">
